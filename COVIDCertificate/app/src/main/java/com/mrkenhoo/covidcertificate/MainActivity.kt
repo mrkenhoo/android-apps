@@ -12,11 +12,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
 class MainActivity : AppCompatActivity() {
-
-    @SuppressLint("SetJavaScriptEnabled")
-    private fun startWebView(url: String) {
-    }
-
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         val webView = findViewById<WebView>(R.id.webView)
         if (webView.canGoBack()) {
