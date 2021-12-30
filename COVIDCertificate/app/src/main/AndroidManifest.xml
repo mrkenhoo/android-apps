@@ -3,7 +3,7 @@
     package="com.mrkenhoo.covidcertificate">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <permission android:name="android.permission.MANAGE_MEDIA" />
+    <uses-permission android:name="android.permission.MANAGE_MEDIA" />
 
     <application
         android:allowBackup="false"
