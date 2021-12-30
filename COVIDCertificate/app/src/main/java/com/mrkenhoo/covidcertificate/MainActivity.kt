@@ -2,6 +2,7 @@ package com.mrkenhoo.covidcertificate
 
 import android.graphics.Bitmap
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -52,5 +53,13 @@ class MainActivity : AppCompatActivity() {
             // Refresh only once
             swipeRefreshLayout.isRefreshing = false
         }
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        val webView = findViewById<WebView>(R.id.webView)
+        if (webView.canGoBack()) {
+            webView.canGoBack()
+        }
+        return super.onKeyDown(keyCode, event)
     }
 }
